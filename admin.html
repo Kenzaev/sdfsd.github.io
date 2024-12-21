@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Админ Панель</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Админ Панель</h1>
+    </header>
+    <main>
+        <section class="admin-form">
+            <h2>Добавить новый товар</h2>
+            <form id="product-form">
+                <label for="product-image">Изображение:</label>
+                <input type="file" id="product-image" accept="image/*" required>
+                <label for="product-name">Название:</label>
+                <input type="text" id="product-name" required>
+                <label for="product-price">Цена:</label>
+                <input type="text" id="product-price" required>
+                <label for="product-video">Ссылка на видео YouTube:</label>
+                <input type="text" id="product-video" placeholder="https://www.youtube.com/watch?v=VIDEO_ID" required>
+                <button type="submit">Добавить товар</button>
+            </form>
+        </section>
+        <section class="product-list" id="product-list">
+            <h2>Список товаров</h2>
+            <!-- Список товаров будет добавлен здесь через JavaScript -->
+        </section>
+    </main>
+    <script src="admin-scripts.js"></script>
+</body>
+</html>
