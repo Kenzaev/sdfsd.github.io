@@ -3,33 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Админ Панель</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Интернет-магазин</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .product-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            width: 100%;
+            max-width: 300px;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-image img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .product-details {
+            padding: 10px;
+            width: 100%;
+        }
+
+        .product-name {
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        .product-description {
+            font-size: 0.9em;
+            color: #555;
+            margin: 5px 0;
+        }
+
+        .product-price {
+            font-size: 1.1em;
+            color: #e57373;
+            margin: 10px 0;
+        }
+
+        .product-button {
+            background-color: #007bff;
+            border: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .product-button:hover {
+            background-color: #0056b3;
+        }
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 20px;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Админ Панель</h1>
-    </header>
-    <main>
-        <section class="admin-form">
-            <h2>Добавить новый товар</h2>
-            <form id="product-form">
-                <label for="product-image">Изображение:</label>
-                <input type="file" id="product-image" accept="image/*" required>
-                <label for="product-name">Название:</label>
-                <input type="text" id="product-name" required>
-                <label for="product-price">Цена:</label>
-                <input type="text" id="product-price" required>
-                <label for="product-video">Ссылка на видео YouTube:</label>
-                <input type="text" id="product-video" placeholder="https://www.youtube.com/watch?v=VIDEO_ID" required>
-                <button type="submit">Добавить товар</button>
-            </form>
-        </section>
-        <section class="product-list" id="product-list">
-            <h2>Список товаров</h2>
-            <!-- Список товаров будет добавлен здесь через JavaScript -->
-        </section>
-    </main>
-    <script src="admin-scripts.js"></script>
+    <div class="gallery">
+        <!-- Пример карточки товара -->
+        <div class="product-card">
+            <div class="product-image">
+                <img src="https://via.placeholder.com/300" alt="Product Name">
+            </div>
+            <div class="product-details">
+                <h3 class="product-name">Product Name</h3>
+                <p class="product-description">Product Description</p>
+                <p class="product-price">Price: $100</p>
+                <button class="product-button">Buy Now</button>
+            </div>
+        </div>
+
+        <!-- Добавьте больше карточек товаров по аналогии -->
+    </div>
 </body>
 </html>
